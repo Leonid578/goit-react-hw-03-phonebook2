@@ -84,7 +84,7 @@ class App extends React.Component {
 
   render() {
     this.findeByName();
-    const { contacts, filter } = this.state;
+    const { contacts,} = this.state;
     return (
       <div className={s.conteiner}>
         <Title text={'Phonebook'} />
@@ -95,7 +95,6 @@ class App extends React.Component {
           <NotContacts text={'The contact list is currently empty'} />
         ) : (
           <ContactList
-            filter={filter}
             onFinde={this.onSaveFinde}
             deleteEl={this.deleteContact}
             contacts={this.findeByName}
