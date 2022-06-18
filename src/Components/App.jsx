@@ -44,10 +44,10 @@ class App extends React.Component {
   };
   // тут я работаю с жизнеными циклами и проверяю локалку при рендере страницы
   componentDidMount() {
-    const lCont = localStorage.getItem('contacts');
-    if (lCont) {
-      const cont = JSON.parse(lCont);
-      this.setState({ contacts: cont });
+    const localContact = localStorage.getItem('contacts');
+    if (localContact) {
+      const contact = JSON.parse(localContact);
+      this.setState({ contacts: contact });
     }
   }
 
